@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade com Bugs</title>
+</head>
+<body>
+    <h1>Teste de Bugs</h1>
+
+    <!-- Bug 1: O botão deveria mostrar um alerta, mas o evento está errado -->
+    <button id="alertBtn">Clique aqui</button>
+
+    <!-- Bug 2: O texto deveria aparecer em vermelho, mas a classe está errada -->
+    <p id="text" class="verde">Este texto deveria estar vermelho</p>
+
+    <!-- Bug 3: O contador não está funcionando -->
+    <div>
+        <p>Contador: <span id="counter">0</span></p>
+        <button id="incrementBtn">Incrementar</button>
+    </div>
+
+    <script>
+        // Bug 1: evento errado, deveria ser 'click'
+        document.getElementById('alertBtn').onclik = function() {
+            alert('Botão clicado!');
+        };
+
+        // Bug 2: a classe verde está no CSS errado (deveria ser vermelho)
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .vermelho {
+                color: red;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Bug 3: o contador não incrementa porque a variável não é atualizada
+        let count = 0;
+        document.getElementById('incrementBtn').addEventListener('click', () => {
+            count + 1;
+            document.getElementById('counter').innerText = count;
+        });
+    </script>
+</body>
+</html>
