@@ -7,13 +7,13 @@
 <body>
     <h1>Teste de Bugs</h1>
 
-    <!-- Bug 1: O botão deveria mostrar um alerta, mas o evento está errado -->
+  
     <button id="alertBtn">Clique aqui</button>
 
-    <!-- Bug 2: O texto deveria aparecer em vermelho, mas a classe está errada -->
+    
     <p id="text" class="verde">Este texto deveria estar vermelho</p>
 
-    <!-- Bug 3: O contador não está funcionando -->
+  
     <div>
         <p>Contador: <span id="counter">0</span></p>
         <button id="incrementBtn">Incrementar</button>
@@ -21,7 +21,7 @@
 
     <script>
         // Bug 1: evento errado, deveria ser 'click'
-        document.getElementById('alertBtn').onclik = function() {
+        document.getElementById('alertBtn').onclick = function() {
             alert('Botão clicado!');
         };
 
