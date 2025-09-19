@@ -37,7 +37,7 @@
         // Bug 3: o contador não incrementa porque a variável não é atualizada
         let count = 0;
         document.getElementById('incrementBtn').addEventListener('click', () => {
-            count + 1;
+            count += 1;
             document.getElementById('counter').innerText = count;
         });
     </script>
